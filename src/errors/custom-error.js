@@ -1,13 +1,13 @@
-import { logger } from "../utils/logger.js";
+import logger from "../logger/index.js";
 
 export default class CustomError {
-  static createError({ cause, message, code }) {
+  static createError({ name = "Error", message, code }) {
     const error = new Error(message);
-    error.status = "error";
-    error.cause = cause;
+    error.name = name;
     error.code = code;
 
-    logger.warn(error);
+    logger.error(error.message);
+    logger.error("code " + error.code);
 
     throw error;
   }

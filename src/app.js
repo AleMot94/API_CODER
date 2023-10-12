@@ -1,7 +1,7 @@
 import express from "express";
-import { productsRouter } from "./routers/products.router.js";
-//import { loggerDev } from "./logger/logger.js";
 import logger from "./logger/index.js";
+import handleError from "./middleware/handleError.js";
+import { loggerTestRouter } from "./routers/logger-test.router.js";
 import { entorno } from "./config/dotenv.config.js";
 
 const app = express();
@@ -10,7 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = entorno.PORT || 9000;
 
-app.use("/api/products", productsRouter);
+app.use("/logger-test", loggerTestRouter);
+
+app.use(handleError);
 
 const httpServer = app.listen(port, () =>
   logger.info(`escuchando en el puerto ${port}`)
