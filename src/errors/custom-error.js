@@ -7,7 +7,6 @@ export default class CustomError {
     error.code = code;
 
     logger.error(error.message);
-    logger.error("code " + error.code);
 
     throw error;
   }
