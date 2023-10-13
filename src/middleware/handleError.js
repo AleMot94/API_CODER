@@ -16,8 +16,11 @@ export default (error, req, res, next) => {
       break;
     // 4
     case EErros.COLLECTION_NOT_FOUND:
-      res.status(500).send({ statusCode: 500, error: error.name });
+      res.status(400).send({ statusCode: 400, error: error.name });
       break;
+    // 5
+    case EErros.FILE_ERROR:
+
     default:
       res.status(500).send({ statusCode: 500, error: "Unhandled error" });
       break;

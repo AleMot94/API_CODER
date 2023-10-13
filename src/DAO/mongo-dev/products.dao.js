@@ -20,4 +20,78 @@ export default class ProductsDao {
       });
     }
   };
+
+  getById = async (id) => {
+    try {
+      const productFind = await productsModel.findOne({ _id: id });
+      return productFind;
+    } catch (error) {
+      throw CustomError.createError({
+        name: "error ID",
+        message: "product with id: " + id + " not found",
+        code: EErros.ID_NOT_FOUND,
+      });
+    }
+  };
+
+  deleteProd = async (id) => {
+    try {
+      const deleted = await productsModel.deleteOne({ _id: id });
+      return deleted;
+    } catch (error) {
+      throw CustomError.createError({
+        name: "error ID",
+        message: "product with id: " + id + " not found",
+        code: EErros.ID_NOT_FOUND,
+      });
+    }
+  };
+
+  post = async (title, description, price, code, stock, status, thumbnail) => {
+    try {
+      const product = await productsModel.create({
+        title,
+        description,
+        price,
+        code,
+        stock,
+        status,
+        thumbnail,
+      });
+
+      return product;
+    } catch (error) {
+      throw CustomError.createError({
+        name: "error objet or code exist",
+        message: "existing code or wrong fields",
+        code: EErros.FIELD_OBJET_ERROR,
+      });
+    }
+  };
+
+  put = async (
+    title,
+    description,
+    price,
+    code,
+    stock,
+    status,
+    thumbnail,
+    id
+  ) => {
+    try {
+      const product = await productsModel.updateOne(
+        { _id: id },
+        { title, description, price, code, stock, status, thumbnail }
+      );
+
+      return product;
+    } catch (error) {
+      throw CustomError.createError({
+        name: "error ID",
+        message: "product with id: " + id + " not found",
+        code: EErros.ID_NOT_FOUND,
+      });
+    }
+  };
 }

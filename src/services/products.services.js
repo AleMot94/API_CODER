@@ -46,6 +46,69 @@ class ProductsService {
       throw error;
     }
   }
+
+  async getProductById(id) {
+    try {
+      const productFind = await productsDao.getById(id);
+
+      return productFind;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async deleteProduct(id) {
+    try {
+      const deleted = await productsDao.deleteProd(id);
+      return deleted;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async addProduct(
+    { title, description, price, code, stock, status },
+    thumbnail
+  ) {
+    try {
+      const productCreated = await productsDao.post(
+        title,
+        description,
+        price,
+        code,
+        stock,
+        status,
+        thumbnail
+      );
+
+      return productCreated;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async updateProduct(
+    { title, description, price, code, stock, status },
+    thumbnail,
+    id
+  ) {
+    try {
+      const productUpdated = await productsDao.put(
+        title,
+        description,
+        price,
+        code,
+        stock,
+        status,
+        thumbnail,
+        id
+      );
+
+      return productUpdated;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export const productsServices = new ProductsService();

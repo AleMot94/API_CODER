@@ -1,33 +1,16 @@
 import express from "express";
 import logger from "../logger/index.js";
 import { productController } from "../controllers/products.controller.js";
+import { uploader } from "../middleware/multer.js";
 
 export const productsRouter = express.Router();
 
 productsRouter.get("/", productController.getAll);
 
-productsRouter.get("/:pid", (req, res) => {
-  const id = req.params.pid;
-  logger.info(id);
-  req.res.send("obtiene producto por id");
-});
+productsRouter.get("/:pid", productController.getById);
 
-productsRouter.post("/", (req, res) => {
-  const product = req.body;
-  logger.info(product);
-  req.res.send("sube un producto nuevo");
-});
+productsRouter.delete("/:pid", productController.deleteById);
 
-productsRouter.put("/:pid", (req, res) => {
-  const id = req.params.pid;
-  const product = req.body;
-  logger.info(id);
-  logger.info(product);
-  req.res.send("actualiza un producto por id");
-});
+productsRouter.post("/", uploader.single("file"), productController.post);
 
-productsRouter.delete("/:pid", (req, res) => {
-  const id = req.params.pid;
-  logger.info(id);
-  req.res.send("elimina un producto por id");
-});
+productsRouter.put("/:pid", uploader.single("file"), productController.putById);
