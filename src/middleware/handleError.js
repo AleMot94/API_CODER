@@ -20,7 +20,8 @@ export default (error, req, res, next) => {
       break;
     // 5
     case EErros.FILE_ERROR:
-
+      res.status(400).send({ statusCode: 400, error: error.name });
+      break;
     default:
       res.status(500).send({ statusCode: 500, error: "Unhandled error" });
       break;
