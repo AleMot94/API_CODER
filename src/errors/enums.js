@@ -4,6 +4,7 @@ const EErros = {
   NOT_CONECT_MONGO: 3,
   COLLECTION_NOT_FOUND: 4,
   FILE_ERROR: 5,
+  NOT_ADD_CART: 6,
 };
 
 export default EErros;

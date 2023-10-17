@@ -60,3 +60,18 @@
 2023-10-12 18:00:57-03:00 [API CODER] error: could not connect to mongo
 2023-10-12 23:01:18-03:00 [API CODER] error: existing code or wrong fields
 2023-10-12 23:31:48-03:00 [API CODER] error: product with id: http://localhost:8000/WEB.jpg not found
+2023-10-16 21:44:50-03:00 [API CODER] error: product not found in the cart
+2023-10-16 21:47:07-03:00 [API CODER] error: product not found in the cart
+2023-10-16 21:48:42-03:00 [API CODER] error: product not found in the cart
+2023-10-16 21:50:38-03:00 [API CODER] error: product not found in the cart
+2023-10-16 21:51:33-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:00:52-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:05:57-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:09:51-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:15:59-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:17:20-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:17:45-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:39:02-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:42:36-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:54:25-03:00 [API CODER] error: product not found in the cart
+2023-10-16 22:55:05-03:00 [API CODER] error: product not found in the cart

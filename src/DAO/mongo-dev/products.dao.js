@@ -27,7 +27,7 @@ export default class ProductsDao {
       return productFind;
     } catch (error) {
       throw CustomError.createError({
-        name: "error ID",
+        name: "error prod ID",
         message: "product with id: " + id + " not found",
         code: EErros.ID_NOT_FOUND,
       });
