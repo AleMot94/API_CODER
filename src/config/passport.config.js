@@ -4,6 +4,7 @@ import GitHubStrategy from "passport-github2";
 import { createHash, isValidPassword } from "../utils/bcrypt.js";
 import { UserModel } from "../DAO/mongo-dev/models/user.model.js";
 import fetch from "node-fetch";
+import logger from "../logger/index.js";
 
 const LocalStrategy = local.Strategy;
 
@@ -16,11 +17,11 @@ export function initPassport() {
         try {
           const user = await UserModel.findOne({ email: username });
           if (!user) {
-            console.log("User Not Found with username (email) " + username);
+            logger.error("User Not Found with username (email) " + username);
             return done(null, false);
           }
           if (!isValidPassword(password, user.password)) {
-            console.log("Invalid Password");
+            logger.error("Invalid Password");
             return done(null, false);
           }
 
@@ -44,7 +45,7 @@ export function initPassport() {
           const { email, firstName, lastName, age } = req.body;
           let user = await UserModel.findOne({ email });
           if (user) {
-            console.log("User already exists or empty fields");
+            logger.error("User already exists or empty fields");
             return done(null, false);
           }
 
@@ -57,12 +58,12 @@ export function initPassport() {
             password: createHash(password),
           };
           let userCreated = await UserModel.create(newUser);
-          console.log(userCreated);
-          console.log("User Registration succesful");
+          logger.info(userCreated);
+          logger.error("User Registration succesful");
           return done(null, userCreated);
         } catch (e) {
-          console.log("Error in register");
-          console.log(e);
+          logger.error("Error in register");
+          logger.error(e);
           return done(e);
         }
       }
@@ -90,6 +91,7 @@ export function initPassport() {
           const emailDetail = emails.find((email) => email.verified == true);
 
           if (!emailDetail) {
+            logger.error("cannot get a valid email for this user");
             return done(new Error("cannot get a valid email for this user"));
           }
           profile.email = emailDetail.email;
@@ -104,15 +106,15 @@ export function initPassport() {
               password: "nopass",
             };
             let userCreated = await UserModel.create(newUser);
-            console.log("User Registration succesful");
+            logger.info("User Registration succesful");
             return done(null, userCreated);
           } else {
-            console.log("User already exists");
+            logger.error("User already exists");
             return done(null, user);
           }
         } catch (e) {
-          console.log("Error en auth github");
-          console.log(e);
+          logger.error("Error en auth github");
+          logger.error(e);
           return done(e);
         }
       }

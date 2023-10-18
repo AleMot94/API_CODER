@@ -17,6 +17,7 @@ import { viewSessionRouter } from "./routers/session.view.router.js";
 import { viewProductsRouter } from "./routers/products.view.router.js";
 import { loggerTestRouter } from "./routers/logger-test.router.js";
 
+// CONFIGURACIONES GENERALES
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,8 +28,7 @@ app.use(express.static(__dirname + "../../public"));
 app.use(
   session({
     store: MongoStore.create({
-      mongoUrl:
-        "mongodb+srv://alejandro1031m:UWj8WnywnULhodYx@ale-cluster0.cywkeum.mongodb.net/?retryWrites=true&w=majority",
+      mongoUrl: entorno.MONGO_URL,
       ttl: 86400 * 7,
     }),
     secret: "es-secreto",
@@ -49,6 +49,7 @@ app.set("view engine", "handlebars");
 app.use("/", viewSessionRouter);
 app.use("/vista/products", viewProductsRouter);
 
+// ENDPOINTS API
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/session", routerSession);
