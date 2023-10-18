@@ -154,6 +154,23 @@ class CartController {
       });
     }
   }
+
+  async purchase(req, res) {
+    try {
+      const idCart = req.params.cid;
+      const ticket = await cartServices.purchase(idCart);
+
+      res.status(200).json({
+        status: "success",
+        payload: ticket,
+      });
+    } catch (error) {
+      res.status(404).json({
+        status: "error",
+        payload: error,
+      });
+    }
+  }
 }
 
 export const cartController = new CartController();

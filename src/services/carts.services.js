@@ -1,12 +1,12 @@
 import CartDao from "../DAO/mongo-dev/carts.dao.js";
 import ProductsDao from "../DAO/mongo-dev/products.dao.js";
+import TicketDao from "../DAO/mongo-dev/ticket.dao.js";
 import CustomError from "../errors/custom-error.js";
 import EErros from "../errors/enums.js";
-import mongoose from "mongoose";
-import logger from "../logger/index.js";
 
 const cartDao = new CartDao();
 const productDao = new ProductsDao();
+const ticketDao = new TicketDao();
 
 class CartServices {
   async getAllCarts(limit, page) {
@@ -151,6 +151,99 @@ class CartServices {
       }
 
       await cart.save();
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async purchase(idCart) {
+    try {
+      const cart = await cartDao.getById(idCart);
+      const productsInCart = cart.products;
+      const productsRequested = [];
+      const productsStock = [];
+      const outOfStock = [];
+      const purchasedProducts = [];
+      let totalPurchaseAmount = 0;
+
+      if (productsInCart.length == 0) {
+        throw CustomError.createError({
+          name: "error no products",
+          message: "there are no products in the cart",
+          code: EErros.EMPTY_CART,
+        });
+      }
+      for (const productEntry of productsInCart) {
+        const productId = productEntry.product._id;
+        const requestedQuantity = productEntry.quantity;
+        productsRequested.push({
+          id: productId,
+          quantity: requestedQuantity,
+        });
+      }
+
+      for (const product of productsRequested) {
+        const productFind = await productDao.getById(product.id);
+
+        productsStock.push({
+          stock: productFind.stock,
+          price: productFind.price,
+          title: productFind.title,
+          description: productFind.description,
+          code: productFind.code,
+          status: productFind.status,
+          id: productFind.id,
+          thumbnail: productFind.thumbnail,
+        });
+      }
+
+      for (let i = 0; i < productsRequested.length; i++) {
+        const requestedQuantity = productsRequested[i].quantity;
+        const availableStock = productsStock[i].stock;
+
+        if (requestedQuantity <= availableStock) {
+          purchasedProducts.push(productsRequested[i]);
+          productsStock[i].stock -= requestedQuantity;
+          totalPurchaseAmount += requestedQuantity * productsStock[i].price;
+
+          await productDao.putStock(productsStock[i].id, {
+            stock: productsStock[i].stock,
+          });
+        } else {
+          outOfStock.push({
+            _id: productsRequested[i].id,
+            quantity: productsRequested[i].quantity,
+          });
+        }
+      }
+
+      const ticket = {
+        code: Math.floor(Math.random() * 99999999999),
+        purchase_datetime: new Date(),
+        amount: totalPurchaseAmount,
+        purchase: JSON.stringify(purchasedProducts),
+      };
+
+      const newTicket = await ticketDao.post(ticket);
+      await newTicket.save();
+
+      if (outOfStock) {
+        const updatedProductsInCart = outOfStock.map((product) => ({
+          _id: product._id,
+          quantity: product.quantity,
+        }));
+        cart.products = updatedProductsInCart;
+        await cart.save();
+      } else {
+        cart.products = [];
+        await cart.save();
+      }
+
+      return {
+        purchasedProducts,
+        outOfStock,
+        ticket: newTicket,
+      };
     } catch (error) {
       throw error;
     }

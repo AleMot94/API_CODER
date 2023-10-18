@@ -5,6 +5,8 @@ const EErros = {
   COLLECTION_NOT_FOUND: 4,
   FILE_ERROR: 5,
   NOT_ADD_CART: 6,
+  EMPTY_CART: 7,
+  COULD_NOT_UPDATE: 8,
 };
 
 export default EErros;

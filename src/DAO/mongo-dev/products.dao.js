@@ -94,4 +94,21 @@ export default class ProductsDao {
       });
     }
   };
+
+  putStock = async (id, updatedFields) => {
+    try {
+      const product = await productsModel.updateOne(
+        { _id: id },
+        { $set: updatedFields }
+      );
+
+      return product;
+    } catch (error) {
+      throw CustomError.createError({
+        name: "error update stock",
+        message: "could not update product stock",
+        code: EErros.COULD_NOT_UPDATE,
+      });
+    }
+  };
 }
