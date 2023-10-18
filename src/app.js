@@ -13,6 +13,7 @@ import { initPassport } from "./config/passport.config.js";
 import { productsRouter } from "./routers/products.router.js";
 import { cartsRouter } from "./routers/carts.router.js";
 import { routerSession } from "./routers/session.router.js";
+import { routerTicket } from "./routers/ticket.router.js";
 import { viewSessionRouter } from "./routers/session.view.router.js";
 import { viewProductsRouter } from "./routers/products.view.router.js";
 import { loggerTestRouter } from "./routers/logger-test.router.js";
@@ -53,6 +54,7 @@ app.use("/vista/products", viewProductsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/session", routerSession);
+app.use("/api/tickets", routerTicket);
 
 // TEST LOGGER
 app.use("/logger-test", loggerTestRouter);

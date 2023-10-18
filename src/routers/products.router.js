@@ -1,5 +1,4 @@
 import express from "express";
-import logger from "../logger/index.js";
 import { productController } from "../controllers/products.controller.js";
 import { uploader } from "../middleware/multer.js";
 
