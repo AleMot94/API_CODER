@@ -4,9 +4,11 @@ import handleError from "./middleware/handleError.js";
 import { entorno } from "./config/dotenv.config.js";
 import { __dirname } from "./utils/dirname.js";
 import connectMongo from "./utils/mongoose.js";
+import handlebars from "express-handlebars";
 // ROUTERS
 import { productsRouter } from "./routers/products.router.js";
 import { cartsRouter } from "./routers/carts.router.js";
+import { viewSessionRouter } from "./routers/session.view.router.js";
 import { loggerTestRouter } from "./routers/logger-test.router.js";
 
 const app = express();
@@ -15,6 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 const port = entorno.PORT || 9000;
 connectMongo();
 app.use(express.static(__dirname + "../../public"));
+// CONFIGURACION DE HANDLEBARS
+app.engine("handlebars", handlebars.engine());
+app.set("views", __dirname + "../../views");
+app.set("view engine", "handlebars");
+
+// ENDPOINTS VISTAS
+app.use("/", viewSessionRouter);
 
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
