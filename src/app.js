@@ -54,7 +54,7 @@ app.use("/vista/products", viewProductsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/session", routerSession);
-app.use("/api/tickets", routerTicket);
+app.use("/api/ticket", routerTicket);
 
 // TEST LOGGER
 app.use("/logger-test", loggerTestRouter);

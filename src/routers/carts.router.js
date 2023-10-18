@@ -1,5 +1,6 @@
 import express from "express";
 import { cartController } from "../controllers/carts.controller.js";
+import { authUser } from "../validations/authUser.js";
 
 export const cartsRouter = express.Router();
 
@@ -9,7 +10,7 @@ cartsRouter.get("/:cid", cartController.getById);
 
 cartsRouter.post("/", cartController.addCart);
 
-cartsRouter.post("/:cid/product/:pid", cartController.addProdInCart);
+cartsRouter.post("/:cid/product/:pid", authUser, cartController.addProdInCart);
 
 cartsRouter.delete("/:cid", cartController.deleteAllProdsInCart);
 

@@ -83,7 +83,6 @@ class CartController {
       const idCart = req.params.cid;
       const idProduct = req.params.pid;
       const { quantity } = req.query;
-      logger.info(idCart);
 
       await cartServices.addProductToCart(idCart, idProduct, quantity);
 

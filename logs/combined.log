@@ -1202,3 +1202,31 @@
 2023-10-18 15:02:09-03:00 [API CODER] info: Connected to mongo
 2023-10-18 15:03:05-03:00 [API CODER] info: escuchando en el puerto 8000
 2023-10-18 15:03:06-03:00 [API CODER] info: Connected to mongo
+2023-10-18 15:36:34-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 15:36:34-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:48:50-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:48:51-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:49:30-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:49:31-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:49:44-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:49:44-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:50:19-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:50:20-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:51:24-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:51:24-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:51:28-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:51:29-03:00 [API CODER] info: Connected to mongo
+2023-10-18 17:52:15-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 17:52:15-03:00 [API CODER] info: Connected to mongo
+2023-10-18 18:03:39-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 18:03:39-03:00 [API CODER] info: Connected to mongo
+2023-10-18 18:04:35-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 18:04:35-03:00 [API CODER] info: Connected to mongo
+2023-10-18 18:06:47-03:00 [API CODER] error: Invalid Password
+2023-10-18 18:09:42-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 18:09:42-03:00 [API CODER] info: Connected to mongo
+2023-10-18 18:12:26-03:00 [API CODER] error: Invalid Password
+2023-10-18 18:12:50-03:00 [API CODER] error: User already exists
+2023-10-18 18:13:16-03:00 [API CODER] info: 649dbf978ba996045dd74d6f
+2023-10-18 18:13:45-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-18 18:13:45-03:00 [API CODER] info: Connected to mongo
