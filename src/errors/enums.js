@@ -7,6 +7,7 @@ const EErros = {
   NOT_ADD_CART: 6,
   EMPTY_CART: 7,
   COULD_NOT_UPDATE: 8,
+  PAGE_NOT_FOUND: 9,
 };
 
 export default EErros;

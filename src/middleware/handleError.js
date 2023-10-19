@@ -1,6 +1,8 @@
 import EErros from "../errors/enums.js";
+import logger from "../logger/index.js";
 
 export default (error, req, res, next) => {
+  logger.error(JSON.stringify(error));
   switch (error.code) {
     // 1
     case EErros.ID_NOT_FOUND:
@@ -33,6 +35,10 @@ export default (error, req, res, next) => {
     // 8
     case EErros.COULD_NOT_UPDATE:
       res.status(400).send({ statusCode: 400, error: error.name });
+      break;
+    // 9
+    case EErros.PAGE_NOT_FOUND:
+      res.status(404).send({ statusCode: 404, error: error.name });
       break;
     default:
       res.status(500).send({ statusCode: 500, error: "Unhandled error" });

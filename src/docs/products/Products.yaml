@@ -1,48 +1,70 @@
 paths:
-  /api/users:
+  /api/products:
     get:
-      summary: Obtiene todos los usuarios
+      summary: Obtiene todos los productos
       tags:
-        - Users
+        - Products
       responses:
         "200":
-          description: Los usuarios fueron devueltos satisfactoriamente
+          description: Los productos fueron devueltos satisfactoriamente
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#components/schemas/User"
+                  $ref: "#components/schemas/Product"
         "500":
           description: Error del servidor. Usualmente generando la query o falla la conexion a la DB
-  /api/users/{uid}:
-    get:
-      summary: Obtiene un user
+    post:
+      summary: Postear un nuevo producto a la base de datos
       tags:
-        - Users
+        - Products
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/postProduct"
+      responses:
+        "200":
+          description: Producto modificado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "400":
+          description: Error por no cargar un archivo, codigo del producto ya existente o los campos del objeto enviado son incorrectos
+  /api/products/{pid}:
+    get:
+      summary: Obtiene un producto
+      tags:
+        - Products
       parameters:
-        - name: uid
+        - name: pid
           in: path
           required: true
-          description: ID del usuario que se busca
+          description: ID del producto que se busca
           schema:
             $type: String
       responses:
         "200":
-          description: Usuario encontrado
+          description: Producto encontrado
           content:
             application/json:
               schema:
-                $ref: "#components/schemas/User"
+                $ref: "#components/schemas/Product"
+        "404":
+          description: Error por ID incorrecto, o falla la conexion a la DB
     put:
-      summary: Actualizar un user a partir del ID
+      summary: Actualizar un producto a partir del ID, SE NECESITA PERMISO DE ADMINISTRADOR
       tags:
-        - Users
+        - Products
+      security:
+        - BearerAuth: []
       parameters:
-        - name: uid
+        - name: pid
           in: path
           required: true
-          description: ID del usuario que se busca
+          description: ID del producto que se busca
           schema:
             $type: String
       requestBody:
@@ -50,14 +72,38 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#components/requestBodies/updateUser"
+              $ref: "#components/requestBodies/postProduct"
       responses:
         "200":
-          description: Usuario modificado exitosamente
+          description: Producto modificado exitosamente
           content:
             application/json:
               schema:
                 $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto, por no cargar un archivo o los campos del objeto enviado son incorrectos
+    delete:
+      summary: Elimina un producto con su ID, SE NECESITA PERMISO DE ADMINISTRADOR
+      tags:
+        - Products
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del producto que se desea eliminar
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Producto encontrado
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Product"
+        "404":
+          description: Error por ID incorrecto, o falla la conexion a la DB
 components:
   schemas:
     Success:
@@ -66,54 +112,96 @@ components:
         status:
           type: String
           description: success or error
-        message:
-          type: String
-          description: aclarando que ocurrio
+        payload:
+          type: object
+          object: { object }
       example:
         status: success
-        message: User updated
-    User:
+        payload: {}
+    Product:
       type: object
       properties:
         _id:
           type: ObjectId
-          description: ID auto generado by mongo
-        first_name:
+          description: ID auto generado por mongo
+        title:
           type: String
-          description: Primer nombre
-        last_name:
+          description: nombre del producto
+        description:
           type: String
-          description: Apellido
-        email:
+          description: descripcion del producto
+        price:
+          type: Number
+          description: precio del producto
+        thumbnail:
           type: String
-          description: Email de usuario
-        password:
+          description: imagen del producto
+        code:
           type: String
-          description: Password hasheado del user
+          description: codigo del producto
+        stock:
+          type: Number
+          description: stock del producto
+        status:
+          type: Boolean
+          description: estado del producto
       example:
         _id: ObjectId("644081a93f0625dc193bc594")
-        first_name: Adrian
-        last_name: Campo
-        email: atrian@gmail.com
-        password: $2b$10$Cf.uErjQ/lEzypTNfyE1IuFGxVXSRqGzjFWBYwL9KLK4Fe29kvu.e
+        title: iphone 14 pro
+        description: Esta es la descripcion del producto
+        price: 4000
+        thumbnail: http://localhost:8000/WEB.jpg
+        code: poi988
+        stock: 25
+        status: true
   requestBodies:
-    updateUser:
-      type: object
-      properties:
-        first_name:
-          type: String
-          description: Primer nombre
-        last_name:
-          type: String
-          description: Apellido
-        email:
-          type: String
-          description: Email de usuario
-        password:
-          type: String
-          description: Password hasheado del user
+    postProduct:
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              _id:
+                type: ObjectId
+                description: ID auto generado por mongo
+              title:
+                type: string
+                description: nombre del producto
+              description:
+                type: string
+                description: descripción del producto
+              price:
+                type: number
+                description: precio del producto
+              thumbnail:
+                type: object
+                properties:
+                  filename:
+                    type: string
+                    description: Nombre del archivo
+                  data:
+                    type: string
+                    format: binary
+                    description: Datos del archivo
+                description: Archivo con la imagen del producto
+              code:
+                type: string
+                description: código del producto
+              stock:
+                type: number
+                description: stock del producto
+              status:
+                type: boolean
+                description: estado del producto
       example:
-        first_name: Adrian
-        last_name: Campo
-        email: atrian@gmail.com
-        password: $2b$10$Cf.uErjQ/lEzypTNfyE1IuFGxVXSRqGzjFWBYwL9KLK4Fe29kvu.e
+        _id: ObjectId("644081a93f0625dc193bc594")
+        title: iphone 14 pro
+        description: Esta es la descripción del producto
+        price: 4000
+        thumbnail:
+          filename: example.jpg
+          data: base64_encoded_data_here
+        code: poi988
+        stock: 25
+        status: true

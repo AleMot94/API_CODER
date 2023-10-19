@@ -1,5 +1,8 @@
 import express from "express";
+import "express-async-errors";
 import logger from "./logger/index.js";
+import CustomError from "./errors/custom-error.js";
+import EErros from "./errors/enums.js";
 import handleError from "./middleware/handleError.js";
 import { entorno } from "./config/dotenv.config.js";
 import { __dirname } from "./utils/dirname.js";
@@ -53,13 +56,12 @@ const swaggerOptions = {
   definition: {
     openapi: "3.0.1",
     info: {
-      title: "Documentacion Pizzas",
-      description: "Este proyecto no es de pizzas, es de usuarios",
+      title: "Documentacion API CODER",
+      description: "proyecto final CODER HOUSE",
     },
   },
   apis: [`${__dirname}/../docs/**/*.yaml`],
 };
-//console.log(`${__dirname}/../docs/**/*.yaml`);
 const specs = swaggerJSDoc(swaggerOptions);
 app.use("/apidocs", swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
 
@@ -75,6 +77,18 @@ app.use("/api/ticket", routerTicket);
 
 // TEST LOGGER
 app.use("/logger-test", loggerTestRouter);
+
+app.get("*", (req, res, next) => {
+  try {
+    throw CustomError.createError({
+      name: "error page not found",
+      message: "the path not exist",
+      code: EErros.COULD_NOT_UPDATE,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 
 app.use(handleError);
 
