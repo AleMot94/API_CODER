@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -e yaml,js src/app.js DEV",
-    "start": "nodemon src/app.js PROD",
+    "start": "node src/app.js PROD",
     "test": "mocha test/Products.test.js",
     "supertest": "mocha test/supertest.test.js"
   },
