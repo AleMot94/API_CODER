@@ -13,7 +13,7 @@ import MongoStore from "connect-mongo";
 import passport from "passport";
 import { initPassport } from "./config/passport.config.js";
 import swaggerJSDoc from "swagger-jsdoc";
-import swaggerUiExpress from "swagger-Ui-Express";
+import swaggerUiExpress from "swagger-ui-express";
 // ROUTERS
 import { productsRouter } from "./routers/products.router.js";
 import { cartsRouter } from "./routers/carts.router.js";
