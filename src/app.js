@@ -14,7 +14,6 @@ import passport from "passport";
 import { initPassport } from "./config/passport.config.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-Ui-Express";
-
 // ROUTERS
 import { productsRouter } from "./routers/products.router.js";
 import { cartsRouter } from "./routers/carts.router.js";

@@ -63,7 +63,7 @@ export default class CartDao {
       throw CustomError.createError({
         name: "error add cart",
         message: "could not add new cart",
-        code: EErros.ID_NOT_FOUND,
+        code: EErros.NOT_CONECT_MONGO,
       });
     }
   };

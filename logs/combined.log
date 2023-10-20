@@ -1421,3 +1421,281 @@
 2023-10-19 19:22:48-03:00 [API CODER] info: Connected to mongo
 2023-10-19 19:24:47-03:00 [API CODER] info: escuchando en el puerto 8000
 2023-10-19 19:24:48-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:31:32-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:31:33-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:32:33-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:32:34-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:34:22-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:34:23-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:35:46-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:35:47-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:37:45-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:37:46-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:37:52-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:37:53-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:38:25-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:38:26-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:38:33-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:38:33-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:41:23-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:41:24-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:42:45-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:42:46-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:44:52-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:44:53-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:46:13-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:46:14-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:48:02-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:48:03-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:48:33-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:48:34-03:00 [API CODER] info: Connected to mongo
+2023-10-19 19:52:14-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 19:52:20-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:00:48-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:00:49-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:01:28-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:01:28-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:02:06-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:02:07-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:02:19-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:02:20-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:04:04-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:04:05-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:04:31-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:04:32-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:06:46-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:06:47-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:07:24-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:07:26-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:13:41-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:13:42-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:16:50-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:16:51-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:17:33-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:17:34-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:17:45-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:17:46-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:18:07-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:18:08-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:20:15-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:20:15-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:22:27-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:22:27-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:23:21-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:23:21-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:24:09-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:24:10-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:25:09-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:25:09-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:31:49-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:31:49-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:36:24-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:36:24-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:37:08-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:37:09-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:37:25-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:37:25-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:37:31-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:37:32-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:38:04-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:38:05-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:38:32-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:38:33-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:38:44-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:38:45-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:39:14-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:39:15-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:39:47-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:39:48-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:40:35-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:40:36-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:42:48-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:42:48-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:43:01-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:43:02-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:43:41-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:43:42-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:48:24-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:48:25-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:49:14-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:49:14-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:49:21-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:49:22-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:49:30-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:49:30-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:49:54-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:49:55-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:51:12-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:51:13-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:53:02-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:53:02-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:55:05-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:55:06-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:55:31-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:55:32-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:56:10-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:56:11-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:56:53-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:56:54-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:57:50-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:57:51-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:58:12-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:58:12-03:00 [API CODER] info: Connected to mongo
+2023-10-19 20:59:58-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 20:59:59-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:01:58-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:01:59-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:02:15-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:02:15-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:03:57-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:03:58-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:04:09-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:04:10-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:06:49-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:06:50-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:07:00-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:07:01-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:07:22-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:07:23-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:08:03-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:08:04-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:08:15-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:08:16-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:08:37-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:08:37-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:08:52-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:08:53-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:10:01-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:10:02-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:11:42-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:11:43-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:13:59-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:13:59-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:14:32-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:14:33-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:15:02-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:15:03-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:16:44-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:16:45-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:18:15-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:18:16-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:19:10-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:19:11-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:19:18-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:19:19-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:21:32-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:21:32-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:21:47-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:21:48-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:22:10-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:22:11-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:24:02-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:24:02-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:29:22-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:29:22-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:30:46-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:30:47-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:32:39-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:32:39-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:34:53-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:34:54-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:35:10-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:35:11-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:35:17-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:35:18-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:35:50-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:35:51-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:36:40-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:36:40-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:40:01-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:40:01-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:41:26-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:41:27-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:44:13-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:44:13-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:44:32-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:44:33-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:45:03-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:45:04-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:45:18-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:45:19-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:47:11-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:47:11-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:47:23-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:47:23-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:47:35-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:47:36-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:47:39-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:47:40-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:49:20-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:49:21-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:49:55-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:49:56-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:52:59-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:52:59-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:54:25-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:54:26-03:00 [API CODER] info: Connected to mongo
+2023-10-19 21:56:46-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 21:56:47-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:00:22-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:00:23-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:00:54-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:00:55-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:04:37-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:04:37-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:04:51-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:04:51-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:05:36-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:05:37-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:06:17-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:06:18-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:07:00-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:07:01-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:36:56-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:36:57-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:37:23-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:37:24-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:38:13-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:38:14-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:42:45-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:42:46-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:42:59-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:43:00-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:47:42-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:47:42-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:48:42-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:48:43-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:49:19-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:49:19-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:50:02-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:50:03-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:50:07-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:50:08-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:51:20-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:51:21-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:51:27-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:51:28-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:51:36-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:51:36-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:51:54-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:51:55-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:52:03-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:52:04-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:52:08-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:52:09-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:52:42-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:52:42-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:53:01-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:53:01-03:00 [API CODER] info: Connected to mongo
+2023-10-19 22:57:29-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 22:57:29-03:00 [API CODER] info: Connected to mongo
+2023-10-19 23:01:18-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 23:01:19-03:00 [API CODER] info: Connected to mongo
+2023-10-19 23:01:39-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 23:01:39-03:00 [API CODER] info: Connected to mongo
+2023-10-19 23:02:14-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 23:02:15-03:00 [API CODER] info: Connected to mongo
+2023-10-19 23:06:09-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 23:06:10-03:00 [API CODER] info: Connected to mongo
+2023-10-19 23:06:34-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-19 23:06:35-03:00 [API CODER] info: Connected to mongo

@@ -1,0 +1,382 @@
+paths:
+  /api/carts:
+    get:
+      summary: Obtiene todos los carritos
+      tags:
+        - Cart
+      responses:
+        "200":
+          description: Los carritos fueron devueltos satisfactoriamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Cart"
+        "500":
+          description: Error del servidor. Usualmente generando la query o falla la conexion a la DB
+    post:
+      summary: Crea un nuevo carrito en la base de datos
+      tags:
+        - Cart
+      responses:
+        "200":
+          description: Carrito creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "500":
+          description: error en la coneccion con mongo
+  /api/carts/{cid}:
+    get:
+      summary: Obtiene un carrito
+      tags:
+        - Cart
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Carrito encontrado
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/CartById"
+        "404":
+          description: Error por ID incorrecto, o falla la conexion a la DB
+    delete:
+      summary: Borra los productos del carrito
+      tags:
+        - Cart
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Se borraron los productos del carrito
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto, o falla la conexion a la DB
+    put:
+      summary: Actualiza todos los productos del carrito
+      tags:
+        - Cart
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/UpdateProdInCart"
+      responses:
+        "200":
+          description: Productos del carrito modificados exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto, por no cargar un archivo o los campos del objeto enviado son incorrectos
+  /api/carts/{cid}/products/{pid}:
+    post:
+      summary: Carga un producto al carrito, SE NECESITA TENER UNA SESION DE USUARIO INICIADA
+      tags:
+        - Cart
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+        - name: cid
+          in: path
+          required: true
+          description: ID del producto en el carrito
+          schema:
+            $type: String
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/ProdQuantity"
+      responses:
+        "200":
+          description: Producto cargado correctamente al carrito
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto del carrito o del producto
+    put:
+      summary: Actualiza la cantidad de un producto en el carrito
+      tags:
+        - Cart
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+        - name: cid
+          in: path
+          required: true
+          description: ID del producto en el carrito
+          schema:
+            $type: String
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/UpdateQuantityProdInCart"
+      responses:
+        "200":
+          description: Cantidad del producto modificada en el carrito exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto, o no estan los productos en el carrito
+    delete:
+      summary: Borra un producto del carrito
+      tags:
+        - Cart
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+        - name: cid
+          in: path
+          required: true
+          description: ID del producto en el carrito
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Producto del carrito eliminado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Success"
+        "404":
+          description: Error por ID incorrecto, o no esta el producto en el carrito
+  /api/carts/{cid}/purchase:
+    post:
+      summary: Realiza la compra de los productos en el carrito
+      tags:
+        - Cart
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          description: ID del carrito que se busca
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Ticket de compra generado
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/Purchase"
+        "404":
+          description: Error por ID incorrecto o el carrito no existe
+components:
+  schemas:
+    Success:
+      type: object
+      properties:
+        status:
+          type: String
+          description: success or error
+        payload:
+          type: object
+          object: { object }
+      example:
+        status: success
+        payload: {}
+    Cart:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: ID auto generado por mongo
+        products:
+          type: array
+          description: array de productos en el carrito
+          items:
+            type: object
+            properties:
+              product:
+                type: ObjectId
+                description: ID del producto en el carrito, que se refiere a otro modelo de MongoDB
+              quantity:
+                type: number
+                description: Cantidad del producto en el carrito
+                _id:
+                  type: ObjectId
+                  description: ID auto generado por mongo
+      example:
+        cart: "649dbf868ba996045dd74d6d"
+        products:
+          - product:
+              _id: "649dc2f34e35bb3ad4a846e0"
+              title: "producto 1"
+              description: "Este es un producto prueba 1"
+              price: 500
+              thumbnail: "http://localhost:8080/eva01.jpg"
+              code: "abc128"
+              stock: 25
+              status: true
+              __v: 0
+            quantity: 5
+            _id: "652f05b144cc4651c6ef6552"
+    CartById:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: ID auto generado por mongo
+        products:
+          type: array
+          description: array de productos en el carrito
+          items:
+            type: object
+            properties:
+              product:
+                type: ObjectId
+                description: ID del producto en el carrito, que se refiere a otro modelo de MongoDB
+              quantity:
+                type: number
+                description: Cantidad del producto en el carrito
+                _id:
+                  type: ObjectId
+                  description: ID auto generado por mongo
+      example:
+        cart: "649dbf868ba996045dd74d6d"
+        products:
+          - product: "649dc2f34e35bb3ad4a846e0"
+            quantity: 5
+            _id: "652f05b144cc4651c6ef6552"
+  requestBodies:
+    UpdateProdInCart:
+      type: array
+      items:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: id del producto
+          quantity:
+            type: number
+            description: cantidad nueva del producto
+      example:
+        - { _id: "649dc2f34e35bb3ad4a846e0", quantity: 4 }
+        - { _id: "649dcb2d9df2c3639bbb4636", quantity: 3 }
+    UpdateQuantityProdInCart:
+      type: object
+      properties:
+        quantity:
+          type: number
+          description: cantidad nueva del producto, por defecto carga 1
+      example:
+        quantity: 4
+    ProdQuantity:
+      type: object
+      properties:
+        quantity:
+          type: number
+          description: cantidad del producto
+      example:
+        quantity: 4
+    Purchase:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: success or error
+              payload:
+                type: object
+                properties:
+                  purchasedProducts:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          description: id del producto
+                        quantity:
+                          type: number
+                          description: cantidad del producto
+                  outOfStock:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          description: id del producto
+                        quantity:
+                          type: number
+                          description: cantidad del producto
+                  ticket:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                        description: codigo del ticket
+                      purchase_datetime:
+                        type: string
+                        description: fecha de la compra
+                      amount:
+                        type: number
+                        description: precio total a pagar
+                      purchase:
+                        type: string
+                        description: productos y cantidad comprados
+                      _id:
+                        type: string
+                        description: id de ticket generado por mongo
+            example:
+              status: success
+              payload:
+                purchasedProducts:
+                  - { id: "649dc2f34e35bb3ad4a846e0", quantity: 2 }
+                  - { id: "649dcb2d9df2c3639bbb4636", quantity: 2 }
+                outOfStock: []
+                ticket:
+                  code: "67625187085"
+                  purchase_datetime: "2023-10-20T01:32:46.761Z"
+                  amount: 2400
+                  purchase: '[{"id":"649dc2f34e35bb3ad4a846e0","quantity":2},{"id":"649dcb2d9df2c3639bbb4636","quantity":2}]'
+                  _id: "6531d8beaa126693dfc755ca"
