@@ -1772,3 +1772,19 @@
 2023-10-20 15:37:16-03:00 [API CODER] info: Connected to mongo
 2023-10-20 15:39:30-03:00 [API CODER] info: escuchando en el puerto 8000
 2023-10-20 15:39:31-03:00 [API CODER] info: Connected to mongo
+2023-10-20 20:39:49-03:00 [API CODER] info: escuchando en el puerto 8000
+2023-10-20 20:39:50-03:00 [API CODER] info: Connected to mongo
+2023-10-20 20:41:47-03:00 [API CODER] error: the path not exist
+2023-10-20 20:41:47-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:41:48-03:00 [API CODER] error: the path not exist
+2023-10-20 20:41:48-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:42:01-03:00 [API CODER] error: the path not exist
+2023-10-20 20:42:01-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:42:01-03:00 [API CODER] error: the path not exist
+2023-10-20 20:42:01-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:44:13-03:00 [API CODER] error: the path not exist
+2023-10-20 20:44:13-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:44:24-03:00 [API CODER] error: the path not exist
+2023-10-20 20:44:24-03:00 [API CODER] error: {"name":"error page not found","code":8}
+2023-10-20 20:44:24-03:00 [API CODER] error: the path not exist
+2023-10-20 20:44:24-03:00 [API CODER] error: {"name":"error page not found","code":8}
